@@ -29,7 +29,7 @@ cur_group_rows() gives the rows the groups appear in the data.
 
 cur_column() gives the name of the current column (in across() only).
 
-'><title>Context dependent expressions — context • poorman</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><link href="../deps/Fira_Code-0.4.5/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Context dependent expressions — context"><meta property="og:description" content='These functions return information about the "current" group or "current" variable, so only work inside specific
+'><title>Context dependent expressions — context • poorman</title><!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png"><link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png"><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet"><script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Fira_Code-0.4.7/font.css" rel="stylesheet"><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous"><!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Context dependent expressions — context"><meta property="og:description" content='These functions return information about the "current" group or "current" variable, so only work inside specific
 contexts like summarise() and mutate().
 
 n() gives the number of observations in the current group.
@@ -70,7 +70,7 @@ cur_column() gives the name of the current column (in across() only).
     
     <a class="navbar-brand me-2" href="../index.html">poorman</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.6</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.7</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -180,21 +180,21 @@ its value.</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 c 3</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">gf</span> <span class="op"><a href="pipe.html">%&gt;%</a></span> <span class="fu"><a href="mutate.html">mutate</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fu">cur_group_id</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   g          x         y id</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 c 0.81942095 0.5736793  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b 0.33335251 0.8560203  2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c 0.85837702 0.3913019  3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 a 0.01419875 0.4776508  1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 b 0.52007041 0.3259935  2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 c 0.82762250 0.3332868  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   g          x          y id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 b 0.78051767 0.91521676  2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b 0.06903802 0.04408483  2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c 0.60051585 0.12255097  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 a 0.94471474 0.05608635  1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 c 0.01483922 0.56041818  3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 c 0.99096362 0.56488612  3</span>
 <span class="r-in"><span><span class="va">gf</span> <span class="op"><a href="pipe.html">%&gt;%</a></span> <span class="fu"><a href="summarise.html">summarise</a></span><span class="op">(</span>row <span class="op">=</span> <span class="fu">cur_group_rows</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> `summarise()` has grouped output by 'g'. You can override using the `.groups` argument.</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   g row</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 a   4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b   2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 b   5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 c   1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 c   3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b   1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 b   2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 c   3</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 c   5</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6 c   6</span>
 <span class="r-in"><span><span class="va">gf</span> <span class="op"><a href="pipe.html">%&gt;%</a></span> <span class="fu"><a href="summarise.html">summarise</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu">cur_group</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   g data</span>
@@ -202,28 +202,28 @@ its value.</p></li>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 b    b</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 c    c</span>
 <span class="r-in"><span><span class="va">gf</span> <span class="op"><a href="pipe.html">%&gt;%</a></span> <span class="fu"><a href="summarise.html">summarise</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu">cur_data</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   g                                                             data</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 a                                           0.01419875, 0.47765075</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b                       0.3333525, 0.5200704, 0.8560203, 0.3259935</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c 0.8194209, 0.8583770, 0.8276225, 0.5736793, 0.3913019, 0.3332868</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   g                                                                   data</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 a                                                 0.94471474, 0.05608635</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b                         0.78051767, 0.06903802, 0.91521676, 0.04408483</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c 0.60051585, 0.01483922, 0.99096362, 0.12255097, 0.56041818, 0.56488612</span>
 <span class="r-in"><span><span class="va">gf</span> <span class="op"><a href="pipe.html">%&gt;%</a></span> <span class="fu"><a href="summarise.html">summarise</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="fu">cur_data_all</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   g</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 a</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 b</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 c</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                       data</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                  a, 0.014198750955984, 0.477650750195608</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                         b, b, 0.333352508023381, 0.520070414524525, 0.856020329520106, 0.325993495993316</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c, c, c, 0.819420946529135, 0.858377020340413, 0.827622498618439, 0.573679301887751, 0.391301949042827, 0.33328684931621</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                         data</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                                                                                    a, 0.944714735494927, 0.056086353957653</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                         b, b, 0.780517666367814, 0.0690380234736949, 0.915216757683083, 0.0440848292782903</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c, c, c, 0.600515850121155, 0.0148392224218696, 0.990963621065021, 0.122550970409065, 0.560418180190027, 0.564886122941971</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">gf</span> <span class="op"><a href="pipe.html">%&gt;%</a></span> <span class="fu"><a href="mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="across.html">across</a></span><span class="op">(</span><span class="fu"><a href="select_helpers.html">everything</a></span><span class="op">(</span><span class="op">)</span>, <span class="op">~</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu">cur_column</span><span class="op">(</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">.x</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   g      x      y</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 c x 0.82 y 0.57</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b x 0.33 y 0.86</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c x 0.86 y 0.39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 a x 0.01 y 0.48</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 b x 0.52 y 0.33</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 c x 0.83 y 0.33</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 b x 0.78 y 0.92</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 b x 0.07 y 0.04</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 c  x 0.6 y 0.12</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 a x 0.94 y 0.06</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 c x 0.01 y 0.56</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 c x 0.99 y 0.56</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
